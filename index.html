@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTracker - Live Cryptocurrency Prices</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js library for rendering price charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header section -->
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                    <path d="M16 8V24M10 16H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h1>CryptoTracker</h1>
+            </div>
+            <p class="subtitle">Real-time cryptocurrency prices and trends</p>
+        </header>
+
+        <!-- Search and filter section -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/>
+                    <path d="M14 14L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search cryptocurrencies..."
+                    autocomplete="off"
+                >
+            </div>
+            <!-- Loading and last updated indicators -->
+            <div class="status-bar">
+                <span id="lastUpdated" class="last-updated"></span>
+                <button id="refreshBtn" class="refresh-btn" title="Refresh data">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C9.84995 2 11.5 2.85 12.5 4.2M12.5 4.2V1M12.5 4.2H9" 
+                              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading spinner -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading cryptocurrency data...</p>
+        </div>
+
+        <!-- Error message -->
+        <div id="error" class="error-message" style="display: none;">
+            <p>Failed to load cryptocurrency data. Please try again.</p>
+            <button id="retryBtn" class="retry-btn">Retry</button>
+        </div>
+
+        <!-- Cryptocurrency cards grid -->
+        <div id="cryptoGrid" class="crypto-grid">
+            <!-- Cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
