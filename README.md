@@ -2,7 +2,7 @@
 
 A modern, responsive web application that displays real-time cryptocurrency prices, 24-hour changes, and price trend charts. Built with pure HTML, CSS, and JavaScript.
 
-![CryptoTracker Preview](https://via.placeholder.com/1200x600/0a0b0d/3b82f6?text=CryptoTracker+Preview)
+
 
 ## Features
 
